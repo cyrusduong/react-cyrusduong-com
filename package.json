@@ -9,7 +9,7 @@
     "start": "npm run compile && npm run webpack:dev && webpack-dev-server --mode development",
     "compile": "npm run compile:babel",
     "compile:babel": "babel src --out-dir lib",
-    "webpack": "webpack",
+    "webpack": "webpack --mode production",
     "webpack:dev": "webpack --mode development"
   },
   "repository": {
