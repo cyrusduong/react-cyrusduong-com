@@ -16,7 +16,7 @@ module.exports = {
         }
       }, {
         test: /\.css$/,
-        use: [ 'style-loader', 'css-loader' ]
+        use: ['style-loader', 'css-loader']
       }
     ]
   },
@@ -30,9 +30,9 @@ module.exports = {
     contentBase: path.join(__dirname, 'public/'),
     hotOnly: true,
     port: 6969,
-    publicPath: 'http://localhost:6969/dist/',
+    publicPath: 'http://localhost:6969/dist/'
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin()
-  ],
+  ]
 }

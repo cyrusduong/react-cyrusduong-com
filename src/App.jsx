@@ -3,7 +3,11 @@ import { hot } from 'react-hot-loader';
 
 class App extends React.Component {
   render() {
-    return <div>Time to do some work</div>
+    return (
+      <div>
+        Hello there...
+      </div>
+    )
   }
 }
 
