@@ -1,5 +1,5 @@
-const path = require('path');
-const webpack = require('webpack');
+const path = require('path')
+const webpack = require('webpack')
 
 module.exports = {
   entry: './src/index.js',
@@ -14,9 +14,21 @@ module.exports = {
           presets: ['env', 'react'],
           plugins: ['react-hot-loader/babel']
         }
-      }, {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+      },
+      {
+        test: /\.(css|scss)$/,
+        use: [
+          { loader: 'style-loader' },
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+              localIdentName: '[path][name]__[local]--[hash:base64:5]'
+            }
+          },
+          { loader: 'sass-loader' },
+          { loader: 'postcss-loader' }
+        ]
       }
     ]
   },
@@ -32,7 +44,5 @@ module.exports = {
     port: 6969,
     publicPath: 'http://localhost:6969/dist/'
   },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin()
-  ]
+  plugins: [new webpack.HotModuleReplacementPlugin()]
 }

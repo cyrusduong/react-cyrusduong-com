@@ -9,4 +9,9 @@ html {
 
 body {
   height: 100%;
+  background: none;
+}
+
+#root {
+  height: 100%;
 }
