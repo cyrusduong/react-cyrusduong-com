@@ -1,4 +1,13 @@
+@import url("./../css/fonts.css");
+
 :local {
+  .headerName {
+    font-family: "Lora", serif;
+    font-weight: 400;
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+
   .portraitCrop {
     width: 200px;
     height: 200px;
@@ -17,6 +26,6 @@
   }
 
   .portraitContainer {
-    padding: 40px;
+    padding: 4rem;
   }
 }
