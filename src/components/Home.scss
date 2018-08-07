@@ -1,0 +1,22 @@
+:local {
+  .portraitCrop {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: auto;
+  }
+
+  .portrait {
+    display: block;
+    margin: 0 -45px;
+    height: 100%;
+    width: auto;
+    max-width: none;
+  }
+
+  .portraitContainer {
+    padding: 40px;
+  }
+}

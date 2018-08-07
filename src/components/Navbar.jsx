@@ -2,16 +2,16 @@ import React from 'react'
 import classNames from 'classnames/bind'
 import styles from './Navbar.scss'
 
-let cx = classNames.bind(styles)
+const cx = classNames.bind(styles)
 
 class Navbar extends React.Component {
   render () {
-    var className = cx('active', 'navItem')
+    const className = cx('navItem')
 
     return (
       <div className='navbar'>
         <a className={className} href='#home'>
-          Home
+          Cyrus Duong
         </a>
         <a className={className} href='#about'>
           About

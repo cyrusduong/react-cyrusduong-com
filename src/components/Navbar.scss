@@ -2,10 +2,15 @@
   .navItem {
     display: inline-block;
     padding: 15px;
-  }
-
-  .active {
     color: white;
     font-size: 20px;
+  }
+
+  .navItem {
+    transition: background-color 250ms ease-out;
+  }
+
+  .navItem:hover {
+    background-color: white;
   }
 }
