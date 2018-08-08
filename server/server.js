@@ -1,17 +1,22 @@
 import express from 'express'
-import mongoose from 'mongoose'
+import { MongoClient } from 'mongodb'
 
-const url = process.env.MONGODB_URI || 'mongodb://localhost:32769/test'
+const mongoURL = process.env.MONGODB_URI || 'mongodb://localhost:32769/'
+const dbName = 'test'
+let db
 
-/** connect to MongoDB datastore */
-try {
-  mongoose.connect(
-    url,
-    { useNewUrlParser: true }
-  )
-} catch (error) {
-  console.log('Error attempting to connect to mongoDB. Exiting...')
+const postDBConnect = (err, client) => {
+  if (err) console.error('Failed connecting to mongoDB:', err)
+  console.log('Connected to mongoDB server')
+
+  // Create/Request the specified db
+  db = client.db(dbName)
 }
+
+MongoClient.connect(
+  mongoURL,
+  postDBConnect
+)
 
 const server = express()
 
