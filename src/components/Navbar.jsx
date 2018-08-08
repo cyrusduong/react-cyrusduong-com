@@ -13,15 +13,16 @@ class Navbar extends React.Component {
         <a className={className} href='#home'>
           Cyrus Duong
         </a>
-        <a className={className} href='#about'>
-          About
-        </a>
         <a className={className} href='#blog'>
           Blog
         </a>
-        <a className={className} href='#blog'>
-          Price Flipper
+        <a className={className} href='#post'>
+          Post
         </a>
+        {/* TODO: Future Project */}
+        {/* <a className={className} href='#blog'>
+          Price Flipper
+        </a> */}
       </div>
     )
   }
