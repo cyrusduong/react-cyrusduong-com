@@ -1,4 +1,17 @@
 import express from 'express'
+import mongoose from 'mongoose'
+
+const url = process.env.MONGODB_URI || 'mongodb://localhost:32769/test'
+
+/** connect to MongoDB datastore */
+try {
+  mongoose.connect(
+    url,
+    { useNewUrlParser: true }
+  )
+} catch (error) {
+  console.log('Error attempting to connect to mongoDB. Exiting...')
+}
 
 const server = express()
 
