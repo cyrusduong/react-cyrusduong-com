@@ -1,28 +1,26 @@
 import React from 'react'
 import classNames from 'classnames/bind'
+import { Link } from 'react-router-dom'
+
 import styles from './Navbar.scss'
 
 const cx = classNames.bind(styles)
 
 class Navbar extends React.Component {
   render () {
-    const className = cx('navItem')
+    const navItemClass = cx('navItem')
 
     return (
       <div className='navbar'>
-        <a className={className} href='#home'>
+        <Link className={navItemClass} to='/'>
           Cyrus Duong
-        </a>
-        <a className={className} href='#blog'>
+        </Link>
+        <Link className={navItemClass} to='/blog'>
           Blog
-        </a>
-        <a className={className} href='#post'>
+        </Link>
+        <Link className={navItemClass} to='/post'>
           Post
-        </a>
-        {/* TODO: Future Project */}
-        {/* <a className={className} href='#blog'>
-          Price Flipper
-        </a> */}
+        </Link>
       </div>
     )
   }

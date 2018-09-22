@@ -2,3 +2,4 @@ bin/
 dist/
 lib/
 node_modules/
+data/
